@@ -19,7 +19,7 @@ const Index = () => {
         <header className="text-center mb-12 animate-slide-up">
           <div className="flex items-center justify-center mb-6">
             <img 
-              src="/lovable-uploads/bb354df9-d903-48b9-8343-0d4538288a68.png" 
+              src="/lovable-uploads/ab7c7d4f-8166-4a32-a1a6-82afa92ce154.png" 
               alt="NutsFactory Logo" 
               className="h-20 w-auto"
             />

@@ -18,9 +18,11 @@ const Index = () => {
         {/* Header */}
         <header className="text-center mb-12 animate-slide-up">
           <div className="flex items-center justify-center mb-6">
-            <div className="bg-primary p-4 rounded-full shadow-lg animate-pulse-green">
-              <Sprout className="w-12 h-12 text-primary-foreground" />
-            </div>
+            <img 
+              src="/lovable-uploads/bb354df9-d903-48b9-8343-0d4538288a68.png" 
+              alt="NutsFactory Logo" 
+              className="h-20 w-auto"
+            />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-4 tracking-tight">
             NutsFactory
@@ -89,11 +91,11 @@ const Index = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center justify-center space-x-3 p-4 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">info@nutsfactory.com</span>
+                  <span className="text-muted-foreground">info@nutsfactory.in</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 p-4 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  <span className="text-muted-foreground">+91 9746482342</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 p-4 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                   <MapPin className="w-5 h-5 text-primary" />

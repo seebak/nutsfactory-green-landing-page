@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlala Brokerage - Chatbot Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #e8ca30 0%, #ae9e39 25%, #817011 50%, #886305 75%, #362b04 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Floating shapes for visual interest */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 10%;
+            right: 15%;
+            animation-delay: 0s;
+        }
+
+        .shape2 {
+            width: 200px;
+            height: 200px;
+            background: rgba(135, 206, 235, 0.3);
+            bottom: 20%;
+            left: 10%;
+            animation-delay: 5s;
+        }
+
+        .shape3 {
+            width: 150px;
+            height: 150px;
+            background: rgba(70, 130, 180, 0.2);
+            top: 60%;
+            right: 40%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(30px) rotate(240deg);
+            }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .main-text {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            line-height: 1.2;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-text {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-text {
+                font-size: 1.8rem;
+                letter-spacing: 0.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating background shapes -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1 class="main-text">Chatbot test page </h1>
+        <h1 class="main-text">Dlala Brokerage</h1>
+    </div>
+
+<script type="module" defer>
+  import Chatbot from "https://cdn.n8nchatui.com/v1/pole-embed-yard.js";
+  Chatbot.init({
+    "n8nChatUrl": "https://n8n.caseebak.com/webhook/8c0d9c16-0b42-4e59-a4f8-76cfd3305f51/chat", // Replace this with your n8n chat webhook URL
+    "metadata": {}, // Include any custom data to send with each message to your n8n workflow
+    "theme": {
+      "button": {
+        "backgroundColor": "#a48619",
+        "right": 20,
+        "bottom": 20,
+        "size": 66,
+        "iconColor": "#f7f7f7",
+        "customIconSrc": "https://sb.caseebak.com/storage/v1/object/public/icons/assistant-svgrepo-com.svg",
+        "customIconSize": 86,
+        "customIconBorderRadius": 14,
+        "autoWindowOpen": {
+          "autoOpen": true,
+          "openDelay": 2
+        },
+        "borderRadius": "circle"
+      },
+      "tooltip": {
+        "showTooltip": true,
+        "tooltipMessage": "Hello 👋 Need help ?",
+        "tooltipBackgroundColor": "#fff9f6",
+        "tooltipTextColor": "#1c1c1c",
+        "tooltipFontSize": 19
+      },
+      "chatWindow": {
+        "borderRadiusStyle": "rounded",
+        "avatarBorderRadius": 8,
+        "messageBorderRadius": 8,
+        "showTitle": true,
+        "title": "Dlala",
+        "titleAvatarSrc": "https://sb.caseebak.com/storage/v1/object/public/icons/dlala_logo2.png",
+        "welcomeMessage": "Hi, How can I help you ? / مرحبًا، كيف يمكنني مساعدتك؟",
+        "errorMessage": "Sorry.. There is some error..",
+        "backgroundColor": "#ffffff",
+        "height": 600,
+        "width": 450,
+        "fontSize": 14,
+        "starterPrompts": [
+          "English",
+          "العربية"
+        ],
+        "starterPromptFontSize": 15,
+        "clearChatOnReload": true,
+        "botMessage": {
+          "backgroundColor": "#f8f8f7",
+          "textColor": "#080808",
+          "showAvatar": true,
+          "avatarSrc": "https://sb.caseebak.com/storage/v1/object/public/icons/assistant-svgrepo-com.svg"
+        },
+        "userMessage": {
+          "backgroundColor": "#f9f2e7",
+          "textColor": "#050505",
+          "showAvatar": true,
+          "avatarSrc": "https://sb.caseebak.com/storage/v1/object/public/icons/user.svg"
+        },
+        "textInput": {
+          "placeholder": "Type your query",
+          "backgroundColor": "#fbf8ef",
+          "textColor": "#000000",
+          "sendButtonColor": "#a28417",
+          "maxChars": 80,
+          "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 80 characters.",
+          "autoFocus": true,
+          "borderRadius": 33,
+          "sendButtonBorderRadius": 44
+        },
+        "footer": {
+          "companyLink": "https://www.dlalabroker.com/",
+          "company": "Dlala Brokerage",
+          "text": "Powered By",
+          "textColor": "#9f7f0f"
+        },
+        "renderHTML": true,
+        "voiceInputConfig": {
+          "enabled": false,
+          "maxRecordingTime": 15,
+          "recordingNotSupportedMessage": "To record audio, use modern browsers like Chrome or Firefox that support audio recording"
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
